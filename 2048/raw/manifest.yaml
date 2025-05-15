@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: app-2048
+spec:
+  selector:
+    matchLabels:
+      app: app-2048
+  replicas: 2
+  template:
+    metadata:
+      labels:
+        app: app-2048
+    spec:
+      containers:
+        - image: public.ecr.aws/l6m2t8p7/docker-2048:latest
+          name: app-2048
+          ports:
+            - containerPort: 80
