@@ -1,0 +1,24 @@
+# ArgoCD Ingress
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  annotations:
+    cert-manager.io/cluster-issuer: ca-issuer
+  name: argo-cd
+  namespace: argo-cd
+spec:
+  rules:
+    - host: argo-cd.sandbox.local
+      http:
+        paths:
+          - pathType: Prefix
+            path: /
+            backend:
+              service:
+                name: argo-cd-argocd-server
+                port:
+                  number: 80
+  tls:
+    - hosts:
+        - argo-cd.sandbox.local
+      secretName: argo-cd-tls-certificate
