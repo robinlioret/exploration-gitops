@@ -1,0 +1,11 @@
+apiVersion: apps/v1
+kind: Service
+metadata:
+  name: app-2048-kuz
+spec:
+  selector:
+    app.kubernetes.io/name: app-2048-kuz
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: http
