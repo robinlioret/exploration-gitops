@@ -7,8 +7,8 @@ metadata:
 spec:
   ingressClassName: nginx
   tls:
-    - hosts: │
-        - 2048-kuz.sandbox.local                                                                                                                                                                                     │
+    - hosts:
+        - 2048-kuz.sandbox.local
       secretName: 2048-kuz-cert-tls
   rules:
     - host: 2048-kuz.sandbox.local
