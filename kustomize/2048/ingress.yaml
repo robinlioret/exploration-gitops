@@ -1,19 +1,23 @@
-# apiVersion: networking.k8s.io/v1
-# kind: Ingress
-# metadata:
-#   name: app-2048-kuz
-#   annotations:
-#     nginx.ingress.kubernetes.io/rewrite-target: /
-# spec:
-#   ingressClassName: nginx
-#   rules:
-#     - host: 2048-kuz.sandbox.local
-#       http:
-#         paths:
-#           - path: /
-#             pathType: Prefix
-#             backend:
-#               service:
-#                 name: app-2048-kuz
-#                 port:
-#                   number: 80
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: app-2048-kuz
+  annotations:
+    cert-manager.io/issuer: ca-issuer
+spec:
+  ingressClassName: nginx
+  tls:
+    - hosts: │
+        - 2048-kuz.sandbox.local                                                                                                                                                                                     │
+      secretName: 2048-kuz-cert-tls
+  rules:
+    - host: 2048-kuz.sandbox.local
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: app-2048-kuz
+                port:
+                  number: 80
