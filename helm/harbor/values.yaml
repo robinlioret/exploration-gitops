@@ -18,3 +18,5 @@ registry:
   credentials:
     username: lambda
     password: lambda
+
+externalURL: https://harbor.sandbox.local
