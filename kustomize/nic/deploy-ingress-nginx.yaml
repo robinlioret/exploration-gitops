@@ -507,6 +507,7 @@ spec:
       dnsPolicy: ClusterFirst
       nodeSelector:
         kubernetes.io/os: linux
+        feature.node.kubernetes.io/port-mapping: !!str true
       serviceAccountName: ingress-nginx
       terminationGracePeriodSeconds: 0
       tolerations:
@@ -570,6 +571,7 @@ spec:
               type: RuntimeDefault
       nodeSelector:
         kubernetes.io/os: linux
+        feature.node.kubernetes.io/port-mapping: !!str true
       restartPolicy: OnFailure
       serviceAccountName: ingress-nginx-admission
 ---
@@ -624,6 +626,7 @@ spec:
               type: RuntimeDefault
       nodeSelector:
         kubernetes.io/os: linux
+        feature.node.kubernetes.io/port-mapping: !!str true
       restartPolicy: OnFailure
       serviceAccountName: ingress-nginx-admission
 ---
