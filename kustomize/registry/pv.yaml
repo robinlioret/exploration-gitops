@@ -6,7 +6,6 @@ metadata:
   labels:
     type: local
 spec:
-  storageClassName: hostpath
   claimRef:
     name: registry
     namespace: registry

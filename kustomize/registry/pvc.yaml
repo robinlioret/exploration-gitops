@@ -4,7 +4,6 @@ metadata:
   name: registry
   namespace: registry
 spec:
-  storageClassName: hostpath
   accessModes:
     - ReadWriteMany
   resources:
