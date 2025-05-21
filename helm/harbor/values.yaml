@@ -11,4 +11,8 @@ expose:
 
     annotations:
       cert-manager.io/cluster-issuer: ca-issuer
-    
+
+registry:
+  credentials:
+    username: lambda
+    password: lambda
