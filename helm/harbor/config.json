@@ -1,0 +1,5 @@
+{
+  "repoURL": "https://helm.goharbor.io",
+  "chartName": "harbor",
+  "chartVersion": "1.17.0"
+}

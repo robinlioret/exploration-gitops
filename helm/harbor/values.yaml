@@ -1,0 +1,15 @@
+expose:
+  tls:
+    certSource: secret
+    secret:
+      secretName: "harbor-tls-cert"
+  ingress:
+    host: 
+      core: harbor.sandbox.local
+    annotations:
+      cert-manager.io/cluster-issuer: ca-issuer
+
+persistence:
+  persistentVolumeClaim:
+    registry:
+      existingClaim: harbor-registry
