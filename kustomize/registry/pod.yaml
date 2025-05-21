@@ -1,16 +1,16 @@
-# apiVersion: v1
-# kind: Pod
-# metadata:
-#   name: registry
-#   namespace: registry
-# spec:
-#   containers:
-#     - name: registry
-#       image: registry
-#       volumeMounts:
-#       - mountPath: "/data-internal"
-#         name: registry-data
-#   volumes:
-#     - name: registry-data
-#       persistentVolumeClaim:
-#         claimName: registry
+apiVersion: v1
+kind: Pod
+metadata:
+  name: registry
+  namespace: registry
+spec:
+  containers:
+    - name: registry
+      image: registry
+      volumeMounts:
+      - mountPath: "/data-internal"
+        name: registry-data
+  volumes:
+    - name: registry-data
+      persistentVolumeClaim:
+        claimName: registry
