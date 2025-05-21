@@ -6,7 +6,7 @@ metadata:
 spec:
   containers:
     - name: registry
-      image: nginx
+      image: registry
       volumeMounts:
       - mountPath: "/data-internal"
         name: registry-data
