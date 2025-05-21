@@ -1,0 +1,23 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: registry
+  annotations:
+    cert-manager.io/cluster-issuer: ca-issuer
+spec:
+  ingressClassName: nginx
+  tls:
+    - hosts:
+        - registry.sandbox.local
+      secretName: registry-cert-tls
+  rules:
+    - host: registry.sandbox.local
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: registry
+                port:
+                  number: 80
