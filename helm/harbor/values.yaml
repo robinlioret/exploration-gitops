@@ -13,3 +13,6 @@ persistence:
   persistentVolumeClaim:
     registry:
       existingClaim: harbor-registry
+
+trivy:
+  enabled: false
