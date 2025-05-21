@@ -1,4 +1,6 @@
 expose:
+  type: ingress
+
   tls:
     certSource: secret
 
