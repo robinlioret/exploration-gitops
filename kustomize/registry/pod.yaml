@@ -12,5 +12,6 @@ spec:
         name: registry-data
   volumes:
     - name: registry-data
-      persistentVolumeClaim:
-        claimName: registry
+      hostPath:
+        path: /data/registry
+        type: Directory
