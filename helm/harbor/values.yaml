@@ -1,4 +1,5 @@
 adminPassword: Harbor12345
+externalURL: https://harbor.sandbox.local
 
 exposureType: ingress
 
