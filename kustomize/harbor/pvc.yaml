@@ -4,6 +4,7 @@ metadata:
   name: harbor-registry
   namespace: harbor
 spec:
+  storageClassName: standard
   accessModes:
     - ReadWriteOnce
   volumeName: harbor-registry

@@ -3,6 +3,7 @@ kind: PersistentVolume
 metadata:
   name: harbor-registry
 spec:
+  storageClassName: standard
   capacity:
     storage: 6Gi
   accessModes:
