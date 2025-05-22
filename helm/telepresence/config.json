@@ -1,5 +1,5 @@
 {
-  "repoURL": "ghcr.io/telepresenceio/",
+  "repoURL": "ghcr.io/telepresenceio",
   "chartName": "telepresence-oss",
   "chartVersion": "2.22.4"
 }
