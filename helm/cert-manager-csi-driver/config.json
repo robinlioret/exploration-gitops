@@ -1,0 +1,6 @@
+{
+  "repoURL": "https://charts.jetstack.io",
+  "chartName": "cert-manager-csi-driver",
+  "chartVersion": "v0.10.3",
+  "namespace": "cert-manager"
+}
