@@ -7,7 +7,7 @@ spec:
   capacity:
     storage: 6Gi
   accessModes:
-    - ReadWriteMany
+    - ReadWriteOnce
   hostPath:
     path: /data/registry
   persistentVolumeReclaimPolicy: Retain

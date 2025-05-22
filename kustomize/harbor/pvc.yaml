@@ -6,7 +6,7 @@ metadata:
 spec:
   storageClassName: standard
   accessModes:
-    - ReadWriteMany
+    - ReadWriteOnce
   volumeName: harbor-registry
   resources:
     requests:
