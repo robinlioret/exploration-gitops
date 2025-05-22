@@ -6,6 +6,9 @@ metadata:
 spec:
   accessModes:
     - ReadWriteOnce
+  selector:
+    matchLabels:
+      app.kubernetes.io: harbor-registry
   resources:
     requests:
       storage: 5Gi
