@@ -23,7 +23,3 @@ registry:
   credentials:
     username: lambda
     password: lambda
-
-  podSecurityContext:
-    supplementalGroups:
-      - 0
