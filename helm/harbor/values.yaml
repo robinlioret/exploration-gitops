@@ -20,3 +20,8 @@ registry:
     password: lambda
 
 externalURL: https://harbor.sandbox.local
+
+persistence:
+  persistentVolumeClaim:
+    registry:
+      existingClaim: harbor-registry
