@@ -4,7 +4,6 @@ metadata:
   name: harbor-registry
   namespace: harbor
 spec:
-  storageClassName: hostpath
   accessModes:
     - ReadWriteOnce
   resources:
