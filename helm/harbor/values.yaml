@@ -1,25 +1,27 @@
-adminPassword: Harbor12345
-externalURL: https://harbor.sandbox.local
+expose:
+  type: ingress
 
-exposureType: ingress
+  tls:
+    certSource: secret
 
-ingress:
-  core:
-    hostname: harbor.sandbox.local
+    secret:
+      secretName: harbor-crt
+
+  ingress:
+    hosts:
+      core: harbor.sandbox.local
+
     annotations:
       cert-manager.io/cluster-issuer: ca-issuer
-    
-    extraTls:
-      - secretName: harbor-core-crt
-        hosts:
-          - harbor.sandbox.local
-       
-persistence:
-  persistentVolumeClaim:
-    registry:
-      existingClaim: harbor-registry
 
 registry:
   credentials:
     username: lambda
     password: lambda
+
+externalURL: https://harbor.sandbox.local
+
+persistence:
+  persistentVolumeClaim:
+    registry:
+      existingClaim: harbor-registry

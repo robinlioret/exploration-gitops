@@ -1,5 +1,5 @@
 {
-  "repoURL": "registry-1.docker.io/bitnamicharts",
+  "repoURL": "https://helm.goharbor.io",
   "chartName": "harbor",
-  "chartVersion": "26.0.3"
+  "chartVersion": "1.17.0"
 }
