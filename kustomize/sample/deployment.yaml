@@ -1,20 +1,20 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: flask-sample
+  name: sample-app
 spec:
   selector:
     matchLabels:
-      app.kubernetes.io/name: flask-sample
+      app.kubernetes.io/name: sample-app
   replicas: 2
   template:
     metadata:
       labels:
-        app.kubernetes.io/name: flask-sample
+        app.kubernetes.io/name: sample-app
     spec:
       containers:
-        - image: harbor.sandbox.local/library/flask-sample
-          name: flask-sample
+        - image: harbor.sandbox.local/library/sample-app
+          name: sample-app
           ports:
             - containerPort: 80
               name: http

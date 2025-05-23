@@ -1,23 +1,23 @@
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: flask-sample
+  name: sample-app
   annotations:
     cert-manager.io/cluster-issuer: ca-issuer
 spec:
   ingressClassName: nginx
   tls:
     - hosts:
-        - flask-sample.sandbox.local
-      secretName: flask-sample-cert-tls
+        - sample-app.sandbox.local
+      secretName: sample-app-cert-tls
   rules:
-    - host: flask-sample.sandbox.local
+    - host: sample-app.sandbox.local
       http:
         paths:
           - path: /
             pathType: Prefix
             backend:
               service:
-                name: flask-sample
+                name: sample-app
                 port:
                   number: 80
