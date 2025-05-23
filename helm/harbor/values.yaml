@@ -22,6 +22,4 @@ registry:
 externalURL: https://harbor.sandbox.local
 
 persistence:
-  persistentVolumeClaim:
-    registry:
-      existingClaim: harbor-registry
+  enabled: false
