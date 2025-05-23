@@ -3,5 +3,5 @@ agent:
   securityContext: {}
   initSecurityContext: {}
 
-namespaceSelector:
-  infra.inc/telepresence-namespace: !!str true
+# namespaceSelector:
+#   infra.inc/telepresence-namespace: !!str true
