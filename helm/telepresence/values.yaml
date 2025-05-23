@@ -1,3 +1,7 @@
 agent:
+  # Workaround existing restricting security context.
   securityContext: {}
   initSecurityContext: {}
+
+namespaceSelector:
+  infra.inc/telepresence-namespace: !!str true
