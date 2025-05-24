@@ -13,7 +13,7 @@ spec:
         app.kubernetes.io/name: sample-app
     spec:
       containers:
-        - image: harbor.sandbox.local/library/sample-app
+        - image: harbor.sandbox.local/library/sample-app:latest
           name: sample-app
           ports:
             - containerPort: 80
